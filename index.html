@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Maya Civilization Profile</title>
+<title>[ YOUR CIVILIZATION NAME ] Civilization Profile</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +27,6 @@
     overflow-x: hidden;
   }
 
-  /* ── HERO ── */
   .hero {
     position: relative;
     background: linear-gradient(160deg, #1a120b 0%, #2d1e0f 50%, #3d2b1f 100%);
@@ -43,14 +42,7 @@
   .hero::before {
     content: '';
     position: absolute; inset: 0;
-    background:
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 18px,
-        rgba(201,168,76,0.06) 18px,
-        rgba(201,168,76,0.06) 19px
-      );
+    background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(201,168,76,0.06) 18px, rgba(201,168,76,0.06) 19px);
   }
   .hero-glyph {
     font-size: 3rem;
@@ -87,7 +79,6 @@
     position: relative;
   }
 
-  /* ── NAV PILLS ── */
   .nav-pills {
     display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
     padding: 22px 16px;
@@ -107,24 +98,14 @@
     border-radius: 50px;
     transition: background 0.25s, color 0.25s;
   }
-  .nav-pills a:hover {
-    background: var(--gold);
-    color: var(--dark);
-  }
+  .nav-pills a:hover { background: var(--gold); color: var(--dark); }
 
-  /* ── SECTIONS ── */
   .section {
     max-width: 900px;
     margin: 0 auto;
     padding: 64px 28px;
     border-bottom: 1px solid rgba(61,43,31,0.15);
-    animation: fadeUp 0.6s ease both;
   }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
   .section-label {
     font-family: 'Cinzel', serif;
     font-size: 0.72rem;
@@ -148,26 +129,17 @@
     background: linear-gradient(90deg, var(--gold), var(--jade-lt));
     border-radius: 2px;
   }
+  .section p { font-size: 1.02rem; color: #3a2a1e; margin-bottom: 16px; }
 
-  .section p {
-    font-size: 1.02rem;
-    color: #3a2a1e;
-    margin-bottom: 16px;
-  }
-
-  /* ── VISUAL CARDS ── */
   .visual-card {
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(0,0,0,0.14);
     margin: 28px 0;
-    position: relative;
   }
   .visual-card img {
-    width: 100%;
-    display: block;
-    max-height: 380px;
-    object-fit: cover;
+    width: 100%; display: block;
+    max-height: 380px; object-fit: cover;
     transition: transform 0.5s ease;
   }
   .visual-card:hover img { transform: scale(1.03); }
@@ -182,7 +154,6 @@
     text-transform: uppercase;
   }
 
-  /* ── TWO-COL ACHIEVEMENTS ── */
   .ach-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -199,10 +170,7 @@
   }
   .ach-card:nth-child(2) { border-top-color: var(--gold); }
   .ach-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.15); }
-  .ach-card img {
-    width: 100%; height: 220px;
-    object-fit: cover; display: block;
-  }
+  .ach-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
   .ach-card-body { padding: 20px 22px 24px; }
   .ach-card-body h3 {
     font-family: 'Cinzel', serif;
@@ -212,7 +180,6 @@
   }
   .ach-card-body p { font-size: 0.96rem; color: #4a3828; }
 
-  /* ── PULL QUOTE ── */
   blockquote {
     border-left: 4px solid var(--jade);
     background: rgba(45,106,79,0.07);
@@ -234,13 +201,8 @@
     text-transform: uppercase;
   }
 
-  /* ── DECLINE TIMELINE ── */
   .timeline { margin: 24px 0; }
-  .tl-item {
-    display: flex; gap: 16px;
-    margin-bottom: 24px;
-    align-items: flex-start;
-  }
+  .tl-item { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
   .tl-dot {
     flex-shrink: 0;
     width: 36px; height: 36px;
@@ -256,15 +218,9 @@
     line-height: 1.2;
     box-shadow: 0 2px 8px rgba(139,58,42,0.3);
   }
-  .tl-content h4 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
-    color: var(--terra);
-    margin-bottom: 4px;
-  }
+  .tl-content h4 { font-family: 'Cinzel', serif; font-size: 0.9rem; color: var(--terra); margin-bottom: 4px; }
   .tl-content p { font-size: 0.95rem; color: #4a3828; margin: 0; }
 
-  /* ── FOOTER ── */
   footer {
     background: var(--dark);
     color: #8a7060;
@@ -276,22 +232,24 @@
     text-transform: uppercase;
   }
 
-  @media (max-width: 600px) {
-    .ach-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 600px) { .ach-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- ════ HERO ════ -->
+<!-- ═══════════════════════════════════════════
+     HERO — Edit the title, emoji, and date range
+     ═══════════════════════════════════════════ -->
 <header class="hero">
-  <div class="hero-glyph">𓂀</div>
-  <h1>The Maya Civilization</h1>
-  <p class="hero-sub">Mesoamerica &nbsp;·&nbsp; 200 B.C. – A.D. 900</p>
+  <div class="hero-glyph">[ EMOJI ]</div>  <!-- Pick a relevant emoji e.g. 🏛️ 🌿 ☀️ -->
+  <h1>[ CIVILIZATION NAME ] Civilization</h1>
+  <p class="hero-sub">[ REGION ] &nbsp;·&nbsp; [ DATE RANGE e.g. 200 B.C. – A.D. 900 ]</p>
   <div class="hero-bar"></div>
 </header>
 
-<!-- ════ NAV ════ -->
+<!-- ═══════════════════════════════════════════
+     NAV BAR — Update labels if you rename sections
+     ═══════════════════════════════════════════ -->
 <nav class="nav-pills">
   <a href="#geography">Geography</a>
   <a href="#religion">Religion</a>
@@ -299,202 +257,160 @@
   <a href="#decline">Decline</a>
 </nav>
 
-<!-- ════ GEOGRAPHY ════ -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1: GEOGRAPHY
+     - Replace the <p> text with your own writing
+     - Replace the img src with a relevant image URL
+     - Replace the figcaption with a description
+     ═══════════════════════════════════════════ -->
 <section class="section" id="geography">
   <p class="section-label">Section 01</p>
   <h2>Geography</h2>
 
-  <p>
-    The Maya homeland stretched from <strong>southern Mexico into northern Central America</strong>,
-    encompassing two distinct geographic zones that each shaped how Maya society developed.
-    The <strong>lowland region</strong> to the north included the dry scrub forests of the Yucatán
-    Peninsula and the dense, steamy jungles of southeastern Mexico and northern Guatemala.
-    The <strong>highland region</strong> further south was a range of cool, cloud-covered mountains
-    running from southern Mexico all the way to El Salvador.
-  </p>
-  <p>
-    Geography directly influenced where and how the Maya built their civilization.
-    The fertile soils of both regions supported agriculture — the backbone of Maya
-    life — while the variety of resources across zones encouraged trade between
-    city-states. Cities exchanged local products such as <strong>salt, flint, feathers,
-    shells, and honey</strong>, as well as craft goods like cotton textiles and jade ornaments.
-    The jungle environment also provided materials for the massive pyramids, temples,
-    and palaces that defined Maya urban centers.
-  </p>
-  <p>
-    The geographic isolation of individual city-states — separated by jungle and mountains —
-    contributed to the Maya's politically fragmented structure of independent city-states,
-    each ruled by its own god-king, rather than a single unified empire.
-  </p>
+  <p>[ Write your first geography paragraph here. Describe WHERE your civilization was located. ]</p>
+
+  <p>[ Write your second geography paragraph here. Explain HOW geography impacted your civilization — farming, trade, city locations, etc. ]</p>
+
+  <p>[ Optional third paragraph — any additional geographic impact. Delete this if not needed. ]</p>
 
   <figure class="visual-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Mesoam%C3%A9rica_hoy.png/960px-Mesoam%C3%A9rica_hoy.png"
-         alt="Map showing Mesoamerica region"
-         onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mesoamerica_regions_map.png/800px-Mesoamerica_regions_map.png'"/>
-    <figcaption>The Mesoamerican Region — Homeland of the Maya</figcaption>
+    <img src="[ PASTE IMAGE URL HERE ]" alt="[ Describe the image ]" />
+    <figcaption>[ Image caption — e.g. 'Map of the Maya Homeland' ]</figcaption>
   </figure>
 </section>
 
-<!-- ════ RELIGION ════ -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2: RELIGION
+     - Replace the <p> text with your own writing
+     - The <blockquote> is optional — use it for a
+       relevant quote, or delete the whole block
+     - Replace the img src with a relevant image URL
+     ═══════════════════════════════════════════ -->
 <section class="section" id="religion">
   <p class="section-label">Section 02</p>
   <h2>Religion</h2>
 
-  <p>
-    Religion was not merely one part of Maya life — it <em>was</em> Maya life. The Maya believed
-    in <strong>many gods</strong>, including gods of corn, death, rain, and war. Gods could be good
-    or evil, and sometimes both. They were also associated with the four cardinal directions and
-    with specific colors: <strong>white for north, black for west, yellow for south, red for east,
-    and green for the center</strong>.
-  </p>
-  <p>
-    The Maya believed that <strong>each day was a living god</strong>, and whether that day would
-    be lucky or unlucky depended entirely on which deity was in charge. This belief made
-    an accurate calendar system essential — not just for farming, but for spiritual survival.
-    The calendar told people when to plant crops, when to attack enemies, and when to crown
-    new rulers.
-  </p>
-  <p>
-    <strong>Religious practices</strong> ranged widely. The Maya prayed and made offerings of
-    food, flowers, and incense. They also pierced and cut their own bodies, believing that
-    their blood would nourish the gods. On more extreme occasions, they practiced
-    <strong>human sacrifice</strong> — usually of captured enemies. At Chichén Itzá, captives
-    were thrown into a deep sinkhole lake called a <strong>cenote</strong>, along with gold, jade,
-    and other offerings, as the Maya believed this pleased the gods and kept the world in balance.
-  </p>
-  <p>
-    Religious belief also drove intellectual achievement: Maya theologians needed precise
-    astronomical data to track the gods' movements, which led directly to the development
-    of advanced mathematics, calendars, and observation of the planets, sun, and moon.
-  </p>
+  <p>[ Write your first religion paragraph here. What gods did they believe in? What did religion mean to them? ]</p>
 
+  <p>[ Write your second religion paragraph here. Describe specific religious beliefs or rituals. ]</p>
+
+  <p>[ Write your third religion paragraph here. How did religion influence other parts of their civilization? ]</p>
+
+  <!-- OPTIONAL: Delete this blockquote if you don't have a relevant quote -->
   <blockquote>
-    "Before the world was created, Calm and Silence were the great kings that ruled. Nothing existed, there was nothing."
-    <cite>— The Popol Vuh, Maya Creation Story</cite>
+    "[ Paste a relevant quote here ]"
+    <cite>— [ Source of the quote ]</cite>
   </blockquote>
 
   <figure class="visual-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/ChichenItza-Castillo-Seen-From-East.JPG/960px-ChichenItza-Castillo-Seen-From-East.JPG"
-         alt="El Castillo pyramid at Chichén Itzá, a major religious center"/>
-    <figcaption>El Castillo at Chichén Itzá — A Major Maya Religious Center</figcaption>
+    <img src="[ PASTE IMAGE URL HERE ]" alt="[ Describe the image ]" />
+    <figcaption>[ Image caption ]</figcaption>
   </figure>
 </section>
 
-<!-- ════ ACHIEVEMENTS ════ -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3: ACHIEVEMENTS (2 required)
+     - Fill in BOTH achievement cards
+     - Each card needs: an image URL, a title, and text
+     ═══════════════════════════════════════════ -->
 <section class="section" id="achievements">
   <p class="section-label">Section 03</p>
   <h2>Achievements</h2>
 
-  <p>
-    The Maya produced two categories of achievement that set them apart from nearly every
-    other civilization of their era: <strong>monumental architecture</strong> that still
-    astonishes visitors today, and a <strong>scientific and intellectual tradition</strong> —
-    including writing, mathematics, and astronomy — unmatched in the ancient Americas.
-  </p>
+  <p>[ Optional intro sentence about your civilization's achievements. Can delete if not needed. ]</p>
 
   <div class="ach-grid">
 
-    <!-- Achievement 1 -->
+    <!-- ACHIEVEMENT 1 -->
     <article class="ach-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tikal_temple1_2006_08_11.jpg/800px-Tikal_temple1_2006_08_11.jpg"
-           alt="Temple I at Tikal, Guatemala"/>
+      <img src="[ PASTE IMAGE URL HERE ]" alt="[ Describe the image ]" />
       <div class="ach-card-body">
-        <h3>🏛️ Architecture &amp; Urban Planning</h3>
-        <p>
-          Archaeologists have identified at least <strong>50 major Maya sites</strong>, every one featuring
-          monumental architecture. At Tikal alone, Temple IV stretched <strong>212 feet</strong> into
-          the jungle sky. Maya cities were sophisticated urban environments with giant pyramids,
-          temples, palaces, elaborate stone carvings dedicated to the gods, and a <strong>ball court</strong>
-          in every major city. The ball game played in these stone-sided courts held deep religious and
-          political significance — the Maya believed it maintained the cycles of the sun and moon and
-          brought life-giving rains. Tens of thousands of people lived in the residential areas
-          surrounding each city center.
-        </p>
+        <h3>[ EMOJI ] [ Achievement 1 Title — e.g. Architecture ]</h3>
+        <p>[ Describe your first achievement here. Be specific — include facts, names, and examples. ]</p>
       </div>
     </article>
 
-    <!-- Achievement 2 -->
+    <!-- ACHIEVEMENT 2 -->
     <article class="ach-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Dresden_codex_page_2.jpg/478px-Dresden_codex_page_2.jpg"
-           alt="Page from the Dresden Codex, a surviving Maya bark-paper book"/>
+      <img src="[ PASTE IMAGE URL HERE ]" alt="[ Describe the image ]" />
       <div class="ach-card-body">
-        <h3>📖 Writing, Math &amp; Astronomy</h3>
-        <p>
-          The Maya developed the <strong>most advanced writing system</strong> in the ancient Americas —
-          roughly <strong>800 hieroglyphic symbols (glyphs)</strong>, some representing whole words and
-          others representing syllables. They recorded history in bark-paper books called <strong>codices</strong>.
-          Their math system — a <strong>base-20 system that included zero</strong> — powered extraordinary
-          astronomical precision. Maya mathematicians calculated the solar year at
-          <strong>365.2420 days</strong>, only 0.0002 of a day off from today's accepted value.
-          They also maintained two interlocking calendars: a 260-day religious calendar and a
-          365-day solar calendar, meshed together like gears.
-        </p>
+        <h3>[ EMOJI ] [ Achievement 2 Title — e.g. Writing System ]</h3>
+        <p>[ Describe your second achievement here. Be specific — include facts, names, and examples. ]</p>
       </div>
     </article>
 
   </div>
 </section>
 
-<!-- ════ DECLINE ════ -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4: DECLINE
+     - Fill in the 3 timeline items (add/remove as needed)
+     - Each item needs a label for the dot, a heading, and text
+     - Replace the img src with a relevant image URL
+     ═══════════════════════════════════════════ -->
 <section class="section" id="decline">
   <p class="section-label">Section 04</p>
   <h2>Decline</h2>
 
-  <p>
-    The remarkable history of the Maya ended in mystery. In the <strong>late 800s A.D.</strong>,
-    the Maya suddenly abandoned many of their greatest cities — Tikal, Copán, and others —
-    leaving behind monuments but no clear explanation. Experts point to several overlapping
-    causes rather than a single decisive event.
-  </p>
+  <p>[ Introductory sentence — briefly set up how/when the civilization began to fall. ]</p>
 
   <div class="timeline">
+
+    <!-- TIMELINE ITEM 1 — change the dot label to a date or short word -->
     <div class="tl-item">
-      <div class="tl-dot">700s</div>
+      <div class="tl-dot">[ DATE ]</div>
       <div class="tl-content">
-        <h4>Warfare Between City-States</h4>
-        <p>By the 700s, open warfare had broken out among the various independent Maya
-        city-states. This disrupted trade networks and created severe economic hardship
-        across the region.</p>
+        <h4>[ Cause of Decline #1 ]</h4>
+        <p>[ Explain this cause in 1–2 sentences. ]</p>
       </div>
     </div>
+
+    <!-- TIMELINE ITEM 2 -->
     <div class="tl-item">
-      <div class="tl-dot">ENV</div>
+      <div class="tl-dot">[ DATE ]</div>
       <div class="tl-content">
-        <h4>Environmental Collapse &amp; Famine</h4>
-        <p>Population growth combined with over-farming damaged the environment. This led
-        to food shortages, famine, and the spread of disease throughout Maya communities.</p>
+        <h4>[ Cause of Decline #2 ]</h4>
+        <p>[ Explain this cause in 1–2 sentences. ]</p>
       </div>
     </div>
+
+    <!-- TIMELINE ITEM 3 -->
     <div class="tl-item">
-      <div class="tl-dot">800s</div>
+      <div class="tl-dot">[ DATE ]</div>
       <div class="tl-content">
-        <h4>Toltec Invasion from the North</h4>
-        <p>Warlike peoples from central Mexico known as the <strong>Toltec</strong> moved into
-        Maya lands, fundamentally changing the culture. The high civilization of cities
-        like Tikal and Copán disappeared entirely.</p>
+        <h4>[ Cause of Decline #3 ]</h4>
+        <p>[ Explain this cause in 1–2 sentences. ]</p>
       </div>
     </div>
+
+    <!-- OPTIONAL ITEM 4 — delete if not needed -->
     <div class="tl-item">
-      <div class="tl-dot">1500s</div>
+      <div class="tl-dot">[ DATE ]</div>
       <div class="tl-content">
-        <h4>Spanish Arrival</h4>
-        <p>By the time the Spanish arrived in the early 1500s, the Maya had fractured into
-        small, weak city-states that gave little hint of their former glory.</p>
+        <h4>[ Cause of Decline #4 ]</h4>
+        <p>[ Explain this cause in 1–2 sentences. ]</p>
       </div>
     </div>
+
   </div>
 
   <figure class="visual-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tikal_from_jungle.jpg/960px-Tikal_from_jungle.jpg"
-         alt="Tikal ruins reclaimed by jungle"
-         onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tikal-structures.jpg/800px-Tikal-structures.jpg'"/>
-    <figcaption>The Ruins of Tikal — Once a Towering City, Now Reclaimed by Jungle</figcaption>
+    <img src="[ PASTE IMAGE URL HERE ]" alt="[ Describe the image ]" />
+    <figcaption>[ Image caption ]</figcaption>
   </figure>
 </section>
 
+
+<!-- ═══════════════════════════════════════════
+     FOOTER — Update with your name/class info
+     ═══════════════════════════════════════════ -->
 <footer>
-  <p>Maya Civilization Profile &nbsp;·&nbsp; Mesoamerican Civilizations Unit</p>
-  <p style="margin-top:6px;opacity:0.6;">Sources: World History Textbook, Chapter 16 — "Maya Kings and Cities"</p>
+  <p>[ CIVILIZATION NAME ] Civilization Profile &nbsp;·&nbsp; [ CLASS NAME ]</p>
+  <p style="margin-top:6px;opacity:0.6;">[ Your name ] &nbsp;·&nbsp; [ Date ]</p>
 </footer>
 
 </body>
